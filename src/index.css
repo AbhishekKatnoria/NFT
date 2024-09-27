@@ -10,6 +10,7 @@
 
   /* background */
   --background-color: #22092C;
+  --background-black: #00000033;
   --border-color: #311B3B;
   --backgrond-trans: transparent;
   --background-linear-gradient: linear-gradient(112.86deg, #47295C 39.86%, #C4528A 91.52%);
@@ -102,6 +103,12 @@ body {
     height: 230px;
     border-right: 2px solid #311B3B;
     z-index: 1;
+  }
+
+  .gradient-border {
+    border: 1px solid;
+    border-image-source: linear-gradient(112.86deg, #47295C 39.86%, #C4528A 91.52%);
+    border-image-slice: 1;
   }
 }
 
