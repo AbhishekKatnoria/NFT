@@ -78,3 +78,25 @@ export const AuctionData = [
     subHeading: "Artists",
   },
 ];
+
+export const StartJourneryData = {
+  heading: "Your Journey<br/>Starts Here",
+  cards: [
+    {
+      img: "/HomePage/JourneyWallet.svg",
+      title: "Connect Wallet",
+      subTitle: "We have partners to connect wallets and it is easy to access",
+    },
+    {
+      img: "HomePage/JourneyMarketPlace.svg",
+      title: "AI Marketplace",
+      subTitle:
+        "We Provide marketplace to buy or sell creator collection of Ai ",
+    },
+    {
+      img: "/HomePage/JourneyCollectionImage.svg",
+      title: "Connect Wallet",
+      subTitle: "Add your Ai images from our market to your collection now",
+    },
+  ],
+};
