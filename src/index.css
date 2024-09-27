@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+
+  /* background */
+  --background-color: #22092C;
+  --border-color: #311B3B;
+  --backgrond-trans: transparent;
+  --background-linear-gradient: linear-gradient(112.86deg, #47295C 39.86%, #C4528A 91.52%);
+
+  /* Font */
+  --font-primary: 'Bakbak One', cursive;
+  --font-secondary: 'Poppins', sans-serif;
+  --font-third: 'Inria Sans', sans-serif;
+
+  /* Text */
+  --primary-text: #FFFFFF;
+
+  /* Font Size */
+  --font-6xl: 70px;
+  --font-5xl: 40px;
+  --font-4xl: 36px;
+  --font-base: 18px;
+  --font-sm: 16px;
+  --font-xs: 14px;
+
+
+  /* Line Height */
+  --line-height-6xl: 70px;
+  --line-height-5xl: 70px;
+  --line-height-base: 28px;
+  --line-height-base-2: 28px;
+  --line-height-sm: 28px;
+  --line-height-sm-2: 24px;
+  --line-height-sm-3: 22px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-text);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+
+  h1 {
+    @apply font-bakbak text-font6xl leading-lineHeight6xl;
+  }
+
+  h2 {
+    @apply font-bakbak text-font6xl leading-lineHeight6xl;
+  }
+
+  p {
+    @apply font-poppins text-fontBase leading-lineHeightBase;
+  }
+
+  button {
+    @apply font-inriasans text-fontBase font-bold leading-lineHeightSm3;
+  }
+
+}
+
+@layer utilities {
+  .bg-gradient-filled {
+    background-image: var(--background-linear-gradient);
+  }
+
+  .bg-gradient-transparent {
+    background-image: transparent;
+  }
+
+  .bg-gradient-filled:hover {
+    background-image: var(--backgrond-trans);
+  }
+
+  .br-gradient-filled {
+    border-width: 2px;
+    border-style: solid;
+    border-image: var(--background-linear-gradient);
+    border-radius: 50%;
+  }
+
+  .border-Line {
+    position: relative;
+  }
+
+  .border-Line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 230px;
+    border-right: 2px solid #311B3B;
+    z-index: 1;
+  }
+}
+
+.border-Line:last-child::after {
+  content: none;
+}
+
+.bannerImages {
+  border: 1.58px solid #372048;
+  border-radius: 10px;
+  padding: 13px 14px;
+  background: #110C11;
+}
+
+.bannerImages1 {
+  position: absolute;
+  top: 11px;
+}
+
+.bannerImages2 {
+  position: absolute;
+  right: 0;
+  z-index: -2;
+  top: 32px;
+}
+
+.bannerImages3 {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  left: 90px;
+}
