@@ -5,7 +5,7 @@ const Banner = () => {
     <div className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto">
       <div className="py-3 max-w-[594px] w-full">
         <h1
-          className="mb-5"
+          className="mb-5 tracking-ab"
           dangerouslySetInnerHTML={{ __html: BannerData?.content?.heading }}
         />
         <p className="mb-[30px]">{BannerData?.content?.subHeading}</p>
