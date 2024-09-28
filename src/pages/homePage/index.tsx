@@ -1,15 +1,17 @@
-import Auctions from '../../Components/HomePage/Auctions';
-import Banner from '../../Components/HomePage/Banner';
-import StartJourney from '../../Components/StartJourney';
+import AiCollection from "../../Components/AiCollection";
+import Auctions from "../../Components/HomePage/Auctions";
+import Banner from "../../Components/HomePage/Banner";
+import StartJourney from "../../Components/StartJourney";
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <Auctions/>
-      <StartJourney/>
+      <Auctions />
+      <StartJourney />
+      <AiCollection />
     </>
-  )
-}
+  );
+};
 
 export default Home;

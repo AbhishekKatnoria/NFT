@@ -3,7 +3,6 @@ import { Nav } from "../../json";
 import Button from "../Button";
 
 const Navbar = () => {
-  console.log(Nav);
   return (
     <nav className="pt-5 flex justify-between items-center">
       <div className="inline-block">
@@ -22,7 +21,11 @@ const Navbar = () => {
       </div>
 
       <div className="flex gap-3">
-        <Button variant="filled" css="rounded-[42px]"> <img src={Nav?.button?.img} alt="Checkout" />{Nav?.button?.label}</Button>
+        <Button variant="filled" css="rounded-[42px]">
+          {" "}
+          <img src={Nav?.button?.img} alt="Checkout" />
+          {Nav?.button?.label}
+        </Button>
         <div className="br-gradient-filled">
           <img src={Nav?.checkout?.img} alt="Checkout" />
         </div>

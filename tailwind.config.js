@@ -19,7 +19,7 @@ export default {
         inriasans: "var(--font-third)",
       },
       colors: {
-        backgroundBlack:"var(--background-black)",
+        backgroundBlack: "var(--background-black)",
         background: "var( --background-color)",
         textColor: "var(--primary-text)",
         gradient: "var(--background-linear-gradient)",
@@ -45,12 +45,8 @@ export default {
       },
 
       letterSpacing: {
-        ab: "0.07rem",
+        ab: "0.02rem",
       },
-
-      // borderImage: {
-      //   'gradient-border': 'linear-gradient(112.86deg, #47295C 39.86%, #C4528A 91.52%)',
-      // },
     },
   },
   plugins: [],
