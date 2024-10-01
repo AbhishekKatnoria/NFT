@@ -67,6 +67,10 @@ body {
     @apply font-bakbak text-font6xl leading-lineHeight6xl;
   }
 
+  h3 {
+    @apply font-poppins text-fontBase;
+  }
+
   p {
     @apply font-poppins text-fontBase leading-lineHeightBase;
   }
@@ -119,6 +123,14 @@ body {
       #c4528a 91.52%
     );
     border-image-slice: 1;
+  }
+
+  .border-underline {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .border-underline:last-child {
+    border-bottom: none;
   }
 }
 
