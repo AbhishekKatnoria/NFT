@@ -21,6 +21,8 @@
   --background-linear-gradient: linear-gradient(112.86deg,
       #47295c 39.86%,
       #c4528a 91.52%);
+  --background-linear-gradient-sec: linear-gradient(171.03deg, rgba(34, 9, 44, 0) -0.1%, #22092C 85.39%),
+    linear-gradient(102.42deg, rgba(34, 9, 44, 0) -7.07%, #22092C 86.05%);
 
   /* Font */
   --font-primary: "Bakbak One", cursive;
@@ -137,7 +139,7 @@ body {
   }
 
   .active {
-    background: linear-gradient(112.86deg, #c4528a 39.86%, #47295c 91.52%);
+    background: var(--background-linear-gradient);
     box-shadow: 0px 8px 150px 0px #00000080;
     border-radius: 8px;
     transition: all var(--background-linear-gradient) .5s ease-in;
@@ -162,6 +164,10 @@ body {
 
   .border-underline:last-child {
     border-bottom: none;
+  }
+
+  .linear-gradient-custom {
+    background: var(--background-linear-gradient-sec);
   }
 }
 

@@ -23,6 +23,7 @@ export default {
         background: "var( --background-color)",
         textColor: "var(--primary-text)",
         gradient: "var(--background-linear-gradient)",
+        gradientSec: "var(--background-linear-gradient-sec)",
         borderColor: "var(--border-color)",
       },
 
