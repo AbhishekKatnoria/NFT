@@ -38,6 +38,7 @@ export default {
       lineHeight: {
         lineHeight6xl: "var(--line-height-6xl)",
         lineHeight5xl: "var(--line-height-5xl)",
+        lineHeight4xl: "var(--lineheight-4xl)",
         lineHeightBase: "var(--line-height-base)",
         lineHeightBase2: "var(--line-height-base-2)",
         lineHeightSm: "var(--line-height-sm)",
