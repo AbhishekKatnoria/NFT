@@ -3,10 +3,15 @@
 # dependencies
 /node_modules
 /.pnp
+/.vscode
 .pnp.js
 
 # testing
 /coverage
+
+#lock.json
+/package-lock.json
+/yarn.lock
 
 # production
 /build
