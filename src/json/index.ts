@@ -208,7 +208,10 @@ export const GovernanceData = {
   ],
 };
 
-
 export const SubscribeData = {
   heading: "Subscribe to get update",
+  subHeading:
+    "Leverage cutting-edge AI to create, trade, and enhance images effortlessly. Explore our</br>platform for seamless integration and groundbreaking results.",
+  placeHolder: "enter your email address for update",
+  buttonText: "Subscribe",
 };
