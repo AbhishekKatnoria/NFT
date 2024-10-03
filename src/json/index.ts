@@ -161,3 +161,25 @@ export const TradeData = {
     },
   ],
 };
+
+export const TradeData = {
+  heading: "Future of AI Image trade",
+  img: "HomePage/Tick.svg",
+  content: [
+    {
+      title: "Data analysis with problem factor",
+      subtitle:
+        "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+    },
+    {
+      title: "functionality solution for users",
+      subtitle:
+        "AI image trading platforms offer tools for users to evaluate and manage digital art assets effectively.",
+    },
+    {
+      title: "Latest Technology Enabled",
+      subtitle:
+        "AI image trading uses cutting-edge algorithms to generate, analyze, and trade digital art with enhanced precision.",
+    },
+  ],
+};
