@@ -148,6 +148,13 @@ body {
     background: #FFFFFF33 20%;
   }
 
+  .border-underline {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .border-underline:last-child {
+    border-bottom: none;
+  }
 }
 
 .border-Line:last-child::after {
