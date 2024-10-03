@@ -43,6 +43,7 @@
   /* Line Height */
   --line-height-6xl: 70px;
   --line-height-5xl: 70px;
+  --line-height-4xl: 48px;
   --line-height-base: 28px;
   --line-height-base-2: 28px;
   --line-height-sm: 28px;
@@ -68,7 +69,7 @@ body {
   }
 
   h3 {
-    @apply font-poppins text-fontBase leading-lineHeightBase font-bold;
+    @apply font-poppins text-fontBase leading-lineHeight4xl font-bold;
   }
 
   p {
@@ -128,6 +129,7 @@ body {
     background: var(--background-linear-gradient);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    z-index: -1;
   }
 
   .background-grident {
