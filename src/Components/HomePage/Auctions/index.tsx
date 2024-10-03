@@ -7,12 +7,12 @@ const Auctions = () => {
         {
           AuctionData?.map((items, i) => (
             <div key={i} className="flex-1 text-center border-Line">
-              <h1 className="text-font5xl pb-2 tracking-ab">{items?.heading}</h1>
+              <h1 className="text-font5xl pb-2 tracking-ab font-poppins font-bold">{items?.heading}</h1>
               <p className="text-font5xl leading-[150%]">{items?.subHeading}</p>
             </div>
           ))
         }
-      </div>
+        </div>
     </div>
   )
 }

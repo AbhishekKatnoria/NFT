@@ -10,7 +10,7 @@ const StartJourney = () => {
       <div className="flex gap-6">
         {StartJourneryData?.cards.map((item, i) => (
           <div
-            className=" flex flex-col gap-[18px] border pt-10 pb-9 pl-[14px] pr-[14px] rounded-xl bg-backgroundBlack gradient-border"
+            className=" flex flex-col gap-[18px] pt-10 pb-9 pl-[14px] pr-[14px] rounded-xl bg-backgroundBlack gradient-border"
             key={i}
           >
             <div className="inline-block">
