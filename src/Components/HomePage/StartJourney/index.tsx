@@ -1,4 +1,4 @@
-import { StartJourneryData } from "../../json";
+import { StartJourneryData } from "../../../json";
 
 const StartJourney = () => {
   return (

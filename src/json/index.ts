@@ -141,8 +141,8 @@ export const AiCollectionData = {
 };
 
 export const TradeData = {
-  heading: "Future of AI Image trade",
-  img: "HomePage/Tick.svg",
+  heading: "Future of AI Image Trade",
+  img1: "/HomePage/Tick.svg",
   content: [
     {
       title: "Data analysis with problem factor",
@@ -158,28 +158,60 @@ export const TradeData = {
       title: "Latest Technology Enabled",
       subtitle:
         "AI image trading uses cutting-edge algorithms to generate, analyze, and trade digital art with enhanced precision.",
+    },
+  ],
+  img2: "/HomePage/ai2.png",
+};
+
+export const GovernanceData = {
+  heading: "Governance: Definition</br>& Importance",
+  cards: [
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
+    },
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
+    },
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
     },
   ],
 };
 
-export const TradeData = {
-  heading: "Future of AI Image trade",
-  img: "HomePage/Tick.svg",
-  content: [
-    {
-      title: "Data analysis with problem factor",
-      subtitle:
-        "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
-    },
-    {
-      title: "functionality solution for users",
-      subtitle:
-        "AI image trading platforms offer tools for users to evaluate and manage digital art assets effectively.",
-    },
-    {
-      title: "Latest Technology Enabled",
-      subtitle:
-        "AI image trading uses cutting-edge algorithms to generate, analyze, and trade digital art with enhanced precision.",
-    },
-  ],
+export const SubscribeData = {
+  heading: "Subscribe to get update",
+  subHeading:
+    "Leverage cutting-edge AI to create, trade, and enhance images effortlessly. Explore our</br>platform for seamless integration and groundbreaking results.",
+  placeHolder: "enter your email address for update",
+  buttonText: "Subscribe",
 };

@@ -26,7 +26,7 @@ const Navbar = () => {
           <img src={Nav?.button?.img} alt="Checkout" />
           {Nav?.button?.label}
         </Button>
-        <div className="br-gradient-filled">
+        <div className="gradient-border p-[9px]">
           <img src={Nav?.checkout?.img} alt="Checkout" />
         </div>
       </div>

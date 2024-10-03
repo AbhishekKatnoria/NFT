@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AiCollectionData } from "../../json";
+import { AiCollectionData } from "../../../json";
 
 const AiCollection = () => {
   const [active, setactive] = useState(0);
