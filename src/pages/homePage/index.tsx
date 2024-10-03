@@ -1,10 +1,11 @@
 import React from "react";
-import AiCollection from "../../Components/AiCollection";
+import AiCollection from "../../Components/HomePage/AiCollection";
 import Auctions from "../../Components/HomePage/Auctions";
 import Banner from "../../Components/HomePage/Banner";
-import StartJourney from "../../Components/StartJourney";
-import Trade from "../../Components/Trade";
-import Collection from "../collection";
+import StartJourney from "../../Components/HomePage/StartJourney";
+import Trade from "../../Components/HomePage/Trade";
+import Governance from "../../Components/HomePage/Governance";
+import Subscribe from "../../Components/HomePage/Subscribe";
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <StartJourney />
       <AiCollection />
       <Trade />
-      <Collection/>
+      <Governance/>
+      <Subscribe/>
     </>
   );
 };
