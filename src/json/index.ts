@@ -112,4 +112,30 @@ export const AiCollectionData = {
     { name: "Videos" },
     { name: "Virtual Reality" },
   ],
+  cards: [
+    {
+      img: "/HomePage/alien1.png",
+      name: "Cyborg Alien mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien2.png",
+      name: "Cyborg mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien3.png",
+      name: "Cyborg mecha Robo",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien4.png",
+      name: "Cyborg Girl mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+  ],
 };
