@@ -2,11 +2,10 @@ import { GovernanceData } from "../../../json";
 import Button from "../../Button";
 
 const Governance = () => {
-  console.log(GovernanceData?.cards);
   return (
     <div className="my-[180px]">
       <div className="mb-[120px]">
-        <h2>{GovernanceData?.heading}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: GovernanceData?.heading }} className="text-center" />
       </div>
       <div className="flex gap-6 ">
         {GovernanceData?.cards.map((item, i) => (

@@ -141,7 +141,7 @@ export const AiCollectionData = {
 };
 
 export const TradeData = {
-  heading: "Future of AI Image trade",
+  heading: "Future of AI Image Trade",
   img1: "/HomePage/Tick.svg",
   content: [
     {
@@ -164,7 +164,7 @@ export const TradeData = {
 };
 
 export const GovernanceData = {
-  heading: "Governance: Definition & importance",
+  heading: "Governance: Definition</br>& Importance",
   cards: [
     {
       logo: "/HomePage/aiToken.svg",
