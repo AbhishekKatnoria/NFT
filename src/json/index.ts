@@ -162,3 +162,53 @@ export const TradeData = {
   ],
   img2: "/HomePage/ai2.png",
 };
+
+export const GovernanceData = {
+  heading: "Governance: Definition & importance",
+  cards: [
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
+    },
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
+    },
+    {
+      logo: "/HomePage/aiToken.svg",
+      name: "$ AI Token",
+      desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
+      btn: [
+        {
+          label: "Read More",
+        },
+        {
+          icon: "/HomePage/arrowLeft.svg",
+        },
+      ],
+    },
+  ],
+};
+
+
+export const SubscribeData = {
+  heading: "Subscribe to get update",
+};
