@@ -5,31 +5,31 @@ import Button from "../Button";
 const Navbar = () => {
   return (
     <nav className="pt-5 flex justify-between items-center">
-      <div className="inline-block">
+      {Nav?.logo?.href && Nav?.logo?.label && <div className="inline-block">
         <Link to={Nav?.logo?.href}>
           <img src={Nav?.logo?.label} alt="Logo" />
         </Link>
-      </div>
-      <div className="flex font-poppins">
+      </div>}
+      {Nav?.links.length > 0 && <div className="flex font-poppins">
         <ul className="flex gap-7">
-          {Nav.links.map((item, index) => (
+          {Nav?.links?.map((item, index) => (
             <li key={index}>
               <Link to={item.href}>{item.label}</Link>
             </li>
           ))}
         </ul>
-      </div>
+      </div>}
 
-      <div className="flex gap-3">
+      {Nav?.checkout?.img && Nav?.button?.label && <div className="flex gap-3">
         <Button variant="filled" css="rounded-[42px]">
           {" "}
           <img src={Nav?.button?.img} alt="Checkout" />
           {Nav?.button?.label}
         </Button>
-        <div className="br-gradient-filled">
+        <div className="gradient-border p-[9px]">
           <img src={Nav?.checkout?.img} alt="Checkout" />
         </div>
-      </div>
+      </div>}
     </nav>
   );
 };

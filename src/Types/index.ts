@@ -1,6 +1,8 @@
-export interface ButtonProps {
-    variant?: string;
-    css?: string;
-    label?: string;
-    children?: any;
+interface WithLabel {
+  label?: string;
+}
+export interface ButtonProps extends WithLabel{
+  variant?: string;
+  css?: string;
+  children?: any;
 }

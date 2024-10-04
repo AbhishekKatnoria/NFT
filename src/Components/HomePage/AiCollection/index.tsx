@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AiCollectionData } from "../../json";
+import { AiCollectionData } from "../../../json";
 
 const AiCollection = () => {
   const [active, setactive] = useState(0);
@@ -21,7 +21,7 @@ const AiCollection = () => {
         ))}
       </ul>
 
-      <div className="grid grid-cols-2 mt-[120px] w-full max-w-[772px] mx-auto gap-x-7 gap-y-10 ">
+      {AiCollectionData?.cards.length > 0 && <div className="grid grid-cols-2 mt-[120px] w-full max-w-[772px] mx-auto gap-x-7 gap-y-10 ">
         {AiCollectionData?.cards?.map((items, i) => {
 
           const gridArea = i === 0
@@ -49,7 +49,7 @@ const AiCollection = () => {
             </div>
           )
         })}
-      </div>
+      </div>}
     </div>
   );
 };

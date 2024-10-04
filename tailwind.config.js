@@ -20,9 +20,11 @@ export default {
       },
       colors: {
         backgroundBlack: "var(--background-black)",
-        background: "var( --background-color)",
+        background: "var(--background-color)",
+        backgroundSec: "var(--background-color-sec)",
         textColor: "var(--primary-text)",
         gradient: "var(--background-linear-gradient)",
+        gradientSec: "var(--background-linear-gradient-sec)",
         borderColor: "var(--border-color)",
       },
 
@@ -37,6 +39,7 @@ export default {
       lineHeight: {
         lineHeight6xl: "var(--line-height-6xl)",
         lineHeight5xl: "var(--line-height-5xl)",
+        lineHeight4xl: "var(--lineheight-4xl)",
         lineHeightBase: "var(--line-height-base)",
         lineHeightBase2: "var(--line-height-base-2)",
         lineHeightSm: "var(--line-height-sm)",

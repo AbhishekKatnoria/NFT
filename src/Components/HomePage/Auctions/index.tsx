@@ -3,7 +3,7 @@ import { AuctionData } from "../../../json";
 const Auctions = () => {
   return (
     <div className="mt-[120px] border-b-2  border-borderColor">
-      <div className="flex justify-between mx-auto max-w-[991px] w-full pb-4">
+      {AuctionData?.length > 0 && <div className="flex justify-between mx-auto max-w-[991px] w-full pb-4">
         {
           AuctionData?.map((items, i) => (
             <div key={i} className="flex-1 text-center border-Line">
@@ -12,7 +12,7 @@ const Auctions = () => {
             </div>
           ))
         }
-        </div>
+      </div>}
     </div>
   )
 }
