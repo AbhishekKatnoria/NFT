@@ -180,8 +180,8 @@ export const GovernanceData = {
       ],
     },
     {
-      logo: "/HomePage/aiToken.svg",
-      name: "$ AI Token",
+      logo: "/HomePage/community.svg",
+      name: "Community",
       desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
       btn: [
         {
@@ -193,8 +193,8 @@ export const GovernanceData = {
       ],
     },
     {
-      logo: "/HomePage/aiToken.svg",
-      name: "$ AI Token",
+      logo: "/HomePage/foundation.svg",
+      name: "Foundation",
       desc: "AI image trading uses data analysis to address issues like valuation accuracy and market trends in the digital art space.",
       btn: [
         {
