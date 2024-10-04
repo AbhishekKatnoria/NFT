@@ -3,10 +3,10 @@ import { TradeData } from "../../../json";
 const Trade = () => {
   return (
     <div className="my-[180px]">
-      <div className="mb-[40px]">
+      {TradeData?.heading && <div className="mb-[40px]">
         <h2>{TradeData?.heading}</h2>
-      </div>
-      <div className="flex justify-between">
+      </div>}
+      {TradeData?.content?.length > 0 && <div className="flex justify-between">
         <div className="w-full max-w-[408px]">
           {TradeData?.content?.map((item, i) => (
             <div
@@ -21,10 +21,10 @@ const Trade = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-between linear-gradient-custom relative w-[292px]">
+        {TradeData?.img2 && <div className="flex items-center justify-between linear-gradient-custom relative w-[292px]">
           <img src={TradeData?.img2} alt="" className="absolute -z-10" />
-        </div>
-      </div>
+        </div>}
+      </div>}
     </div>
   );
 };
