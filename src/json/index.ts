@@ -215,3 +215,23 @@ export const SubscribeData = {
   placeHolder: "enter your email address for update",
   buttonText: "Subscribe",
 };
+
+export const FooterData = [
+  {
+    logo: "/HomePage/Nav_Logo.svg",
+    icons: [
+      {
+        img: "HomePage/discord.svg",
+      },
+      {
+        img: "HomePage/twitter.svg",
+      },
+      {
+        img: "HomePage/tele.svg",
+      },
+    ],
+
+    copyRight: "Copyright Project | All Rights reserved",
+    policty: "Terms And Conditions Applied",
+  },
+];
