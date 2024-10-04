@@ -9,7 +9,7 @@ const Subscribe = () => {
       </h2>}
         {SubscribeData?.subHeading && <p className='text-center' dangerouslySetInnerHTML={{ __html: SubscribeData?.subHeading }} />}
 
-        {SubscribeData?.placeHolder || SubscribeData?.buttonText && <div className='max-w-[696px] w-full mt-[80px] bg-white/20 backdrop-blur-[208.3px] rounded-xl'>
+        {SubscribeData?.placeHolder && SubscribeData?.buttonText && <div className='max-w-[696px] w-full mt-[80px] bg-white/20 backdrop-blur-[208.3px] rounded-xl'>
           <div className='flex justify-between items-center  m-[30px]'>
 
             {SubscribeData?.placeHolder && <input type="text" placeholder={SubscribeData?.placeHolder} className='border-none bg-transparent w-full min-w-max text-fontBase focus:outline-none focus:border-none focus:ring-0' />}
