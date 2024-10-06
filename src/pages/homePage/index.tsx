@@ -6,17 +6,18 @@ import StartJourney from "../../Components/HomePage/StartJourney";
 import Trade from "../../Components/HomePage/Trade";
 import Governance from "../../Components/HomePage/Governance";
 import Subscribe from "../../Components/HomePage/Subscribe";
+import { BannerData } from "../../json";
 
 const Home = () => {
   return (
     <>
-      <Banner />
+      <Banner data={BannerData} />
       <Auctions />
       <StartJourney />
       <AiCollection />
       <Trade />
-      <Governance/>
-      <Subscribe/>
+      <Governance />
+      <Subscribe />
     </>
   );
 };
