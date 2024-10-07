@@ -2,7 +2,7 @@ import { TradeData } from "../../../json";
 
 const Trade = () => {
   return (
-    <div className="my-[180px]">
+    <div className="my-[220px]">
       {TradeData?.heading && <div className="mb-[40px]">
         <h2>{TradeData?.heading}</h2>
       </div>}

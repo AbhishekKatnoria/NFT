@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { AiCollectionData } from "../../../json";
 import { AiCollectionProp } from "../../../Types";
 
 interface AiCollection {
@@ -11,7 +10,7 @@ const AiCollection = ({ data }: AiCollection) => {
   const [active, setactive] = useState(0);
 
   return (
-    <div className="my-[180px] max-w-[1026px] w-full mx-auto text-center">
+    <div className="my-[120px] max-w-[1026px] w-full mx-auto text-center">
       <div className="max-w-[878px] mx-auto text-center mb-10">
         {AiCollectionData?.heading ? (
           <h2 className="mb-6 tracking-ab">{AiCollectionData?.heading}</h2>
@@ -36,7 +35,11 @@ const AiCollection = ({ data }: AiCollection) => {
               ? "2 / 2 / 6 / 3"
               : i === 2
                 ? "5 / 1 / 9 / 2"
-                : "6 / 2 / 10 / 3";
+                : i === 3
+                  ? "6 / 2 / 10 / 3"
+                  : i === 4
+                    ? "9 / 1 / 14 / 2"
+                    : "10 / 2 / 14 / 3";
           return (
             <div className={`h-[367px] relative flex items-end`} key={i}
               style={{ gridArea }}

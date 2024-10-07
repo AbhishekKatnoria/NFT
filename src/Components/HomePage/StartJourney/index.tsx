@@ -2,7 +2,7 @@ import { StartJourneryData } from "../../../json";
 
 const StartJourney = () => {
   return (
-    <div className="mt-[275px] mb-[180px]">
+    <div className="mt-[275px] mb-[220px]">
       {StartJourneryData?.heading && <h2
         className="text-center mb-[120px]"
         dangerouslySetInnerHTML={{ __html: StartJourneryData?.heading }}

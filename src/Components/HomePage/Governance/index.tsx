@@ -3,7 +3,7 @@ import Button from "../../Button";
 
 const Governance = () => {
   return (
-    <div className="my-[180px]">
+    <div className="my-[220px]">
       <div className="mb-[120px]">
         {GovernanceData?.heading && <h2 dangerouslySetInnerHTML={{ __html: GovernanceData?.heading }} className="text-center" />}
       </div>

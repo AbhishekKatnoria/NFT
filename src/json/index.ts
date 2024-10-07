@@ -235,3 +235,54 @@ export const FooterData = [
     policty: "Terms And Conditions Applied",
   },
 ];
+
+export const OurPopularAICollection = {
+  heading: "Our Popular AI Collection",
+  desc: "Our AI marketplace specializes in offering unique AI-generated NFTs, including algorithmically created art, digital collectibles, and AI-enhanced images. These NFTs represent cutting-edge AI creativity, providing a new way for collectors and enthusiasts to own, trade, and showcase innovative digital assets.",
+  categories: [
+    { title: "Artwork" },
+    { title: "Music" },
+    { title: "Photography" },
+    { title: "Sports" },
+    { title: "Videos" },
+    { title: "Virtual Reality" },
+  ],
+  cards: [
+    {
+      img: "/HomePage/alien1.png",
+      name: "Cyborg Alien mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien2.png",
+      name: "Cyborg mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien3.png",
+      name: "Cyborg mecha Robo",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien4.png",
+      name: "Cyborg Girl mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien3.png",
+      name: "Cyborg mecha Robo",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      img: "/HomePage/alien4.png",
+      name: "Cyborg Girl mecha",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+  ],
+};
