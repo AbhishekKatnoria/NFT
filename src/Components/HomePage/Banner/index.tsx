@@ -1,8 +1,8 @@
-import { BannerProps } from "../../../Types";
+import { BannerProp } from "../../../Types";
 import Button from "../../Button";
 
 interface Banner {
-  data: BannerProps;
+  data: BannerProp;
 }
 
 const Banner = ({ data }: Banner) => {
@@ -17,9 +17,9 @@ const Banner = ({ data }: Banner) => {
           />
         )}
         <p className="mb-[30px]">{BannerData?.content?.subHeading}</p>
-        {BannerData?.content?.btns?.length > 0 && (
+        {BannerData?.content?.btns && BannerData?.content?.btns?.length > 0 && (
           <div className="flex gap-[10px]">
-            {BannerData?.content?.btns.map((item, i) =>
+            {BannerData?.content?.btns?.map((item, i) =>
               i === 0 ? (
                 <Button variant="filled" css="rounded-[42px]" key={i}>
                   <img src={`${item?.img}`} alt="Wallet" />
