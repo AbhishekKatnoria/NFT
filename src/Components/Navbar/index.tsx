@@ -26,7 +26,7 @@ const Navbar = () => {
           <img src={Nav?.button?.img} alt="Checkout" />
           {Nav?.button?.label}
         </Button>
-        <div className="gradient-border p-[9px]">
+        <div className="p-[9px] gradient-border-varient-sec cursor-pointer overflow-hidden">
           <img src={Nav?.checkout?.img} alt="Checkout" />
         </div>
       </div>}

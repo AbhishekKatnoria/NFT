@@ -144,6 +144,23 @@ body {
     z-index: -1;
   }
 
+  .gradient-border-varient-sec {
+    position: relative;
+  }
+
+  .gradient-border-varient-sec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 1px;
+    background: var(--background-linear-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+  }
+
   .background-grident {
     background: linear-gradient(112.86deg, #47295c 39.86%, #c4528a 91.52%);
     border-radius: 8px;
