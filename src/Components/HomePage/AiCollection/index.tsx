@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { AiCollectionData } from "../../../json";
+import { AiCollectionProp } from "../../../Types";
 
-const AiCollection = () => {
+interface AiCollection {
+  data: AiCollectionProp;
+}
+
+const AiCollection = ({ data }: AiCollection) => {
+  const AiCollectionData = data;
   const [active, setactive] = useState(0);
 
   return (

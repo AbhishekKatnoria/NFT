@@ -14,16 +14,32 @@ export interface Button {
 
 export interface Image {
   img: string;
-  alt: string;
+  alt?: string;
 }
 
 export interface Content {
   heading: string;
-  subHeading: string;
-  btns: Button[];
+  subHeading?: string;
+  desc?: string;
+  btns?: Button[];
 }
 
-export interface BannerProps {
+export interface BannerProp {
   content: Content;
   images: Image[];
+}
+
+export interface Categories {
+  title: string;
+}
+
+export interface Cards extends Image {
+  name: string;
+  like: string;
+  price: string;
+}
+
+export interface AiCollectionProp extends Content {
+  categories: Categories[];
+  cards: Cards[];
 }
