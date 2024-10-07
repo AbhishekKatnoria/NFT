@@ -16,7 +16,7 @@ const AiCollection = () => {
       <ul className="flex justify-between items-center">
         {AiCollectionData?.categories?.map((item, i) => (
           <div className={`py-3 px-6 cursor-pointer ${active === i ? "background-grident active" : "gradient-border"}`} key={i} onClick={() => setactive(i)}>
-            <li >{item?.name}</li>
+            <li >{item?.title}</li>
           </div>
         ))}
       </ul>
@@ -36,14 +36,16 @@ const AiCollection = () => {
               style={{ gridArea }}
             >
               <img src={items?.img} alt="" key={i} className="absolute top-0  w-full h-full rounded-xl object-cover z-10" />
-              <div className="flex flex-col z-20 relative my-[18px] mx-[24px] w-full abc">
-                <div className="flex justify-between items-center mb-2">
-                  <h3>{items?.name}</h3>
-                  <img src={items?.like} alt="Like" />
-                </div>
-                <div className="flex justify-between items-center">
-                  <p>Price</p>
-                  <span>{items?.price}</span>
+              <div className="flex flex-col z-20 relative w-full blur-bg">
+                <div className="my-[18px] mx-[24px] ">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3>{items?.name}</h3>
+                    <img src={items?.like} alt="Like" />
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <p>Price</p>
+                    <span>{items?.price}</span>
+                  </div>
                 </div>
               </div>
             </div>
