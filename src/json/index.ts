@@ -105,12 +105,12 @@ export const AiCollectionData = {
   heading: "Our Popular AI Collection",
   desc: "AI image trading employs advanced algorithms to analyze and value digital artwork. This technology enables more accurate and data-driven investment decisions.",
   categories: [
-    { name: "Artwork" },
-    { name: "Music" },
-    { name: "Photography" },
-    { name: "Sports" },
-    { name: "Videos" },
-    { name: "Virtual Reality" },
+    { title: "Artwork" },
+    { title: "Music" },
+    { title: "Photography" },
+    { title: "Sports" },
+    { title: "Videos" },
+    { title: "Virtual Reality" },
   ],
   cards: [
     {
