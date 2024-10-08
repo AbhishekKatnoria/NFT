@@ -7,18 +7,17 @@ export interface ButtonProps extends WithLabel {
   children?: any;
 }
 
-export interface Button {
+export interface Button extends Image {
   label: string;
-  img: string;
 }
 
 export interface Image {
-  img: string;
+  img?: string;
   alt?: string;
 }
 
-export interface Content {
-  heading: string;
+export interface Content extends Image {
+  heading?: string;
   subHeading?: string;
   desc?: string;
   btns?: Button[];
@@ -42,4 +41,8 @@ export interface Cards extends Image {
 export interface AiCollectionProp extends Content {
   categories: Categories[];
   cards: Cards[];
+}
+
+export interface DefinitionProps extends Categories {
+  card: Content[];
 }

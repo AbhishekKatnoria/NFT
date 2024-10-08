@@ -286,3 +286,27 @@ export const OurPopularAICollection = {
     },
   ],
 };
+
+export const DefinitionImportanceData = {
+  title: "Governance: Definition & Importance",
+  card: [
+    {
+      img: "/Governance/Ai.png",
+      heading: "$ AI Token",
+      subHeading:
+        "An AI token is a blockchain-based digital asset used in AI ecosystems to facilitate transactions, incentivize participation, and enable governance. It acts as the primary currency for buying, selling, or leasing AI models and services, and provides access to premium features. Tokens also offer governance rights, allowing holders to vote on platform decisions, and can be used to reward developers and data providers. Additionally, AI tokens may be integrated with DeFi protocols, enhancing their utility and liquidity.",
+    },
+    {
+      img: "/Governance/co.png",
+      heading: "$ AI Token",
+      subHeading:
+        "An AI token is a blockchain-based digital asset used in AI ecosystems to facilitate transactions, incentivize participation, and enable governance. It acts as the primary currency for buying, selling, or leasing AI models and services, and provides access to premium features. Tokens also offer governance rights, allowing holders to vote on platform decisions, and can be used to reward developers and data providers. Additionally, AI tokens may be integrated with DeFi protocols, enhancing their utility and liquidity.",
+    },
+    {
+      img: "/Governance/people.png",
+      heading: "$ AI Token",
+      subHeading:
+        "An AI token is a blockchain-based digital asset used in AI ecosystems to facilitate transactions, incentivize participation, and enable governance. It acts as the primary currency for buying, selling, or leasing AI models and services, and provides access to premium features. Tokens also offer governance rights, allowing holders to vote on platform decisions, and can be used to reward developers and data providers. Additionally, AI tokens may be integrated with DeFi protocols, enhancing their utility and liquidity.",
+    },
+  ],
+};
