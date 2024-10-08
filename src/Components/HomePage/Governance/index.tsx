@@ -18,7 +18,7 @@ const Governance = () => {
             </div>}
 
             {item?.name && <h3 className="text-font5xl">{item?.name}</h3>}
-            {item?.desc && <p>{item?.desc}</p>}
+            {item?.desc && <p className="text-center">{item?.desc}</p>}
 
             {item?.btn?.length > 0 && <div className="flex gap-[11px]">
               {
