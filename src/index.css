@@ -18,7 +18,7 @@
   --background-color-sec: #241228;
   --background-black: #00000033;
   --border-color: #311b3b;
-  --backgrond-trans: transparent;
+  --background-trans: transparent;
   --background-linear-gradient: linear-gradient(
     112.86deg,
     #47295c 39.86%,
@@ -94,15 +94,20 @@ body {
 
 @layer utilities {
   .bg-gradient-filled {
-    background-image: var(--background-linear-gradient);
+    background: var(--background-linear-gradient);
+    transition: all 0.5s ease;
+  }
+  .bg-gradient-filled:hover {
+    background: var(--backgrond-trans);
   }
 
   .bg-gradient-transparent {
     background-image: transparent;
+    border: none;
   }
 
-  .bg-gradient-filled:hover {
-    background-image: var(--backgrond-trans);
+  .bg-gradient-transparent:hover {
+    background-image: var(--background-linear-gradient);
   }
 
   .br-gradient-filled {
@@ -153,6 +158,23 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 50%;
+    padding: 1px;
+    background: var(--background-linear-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+  }
+
+  .gradient-border-varient-third {
+    position: relative;
+  }
+
+  .gradient-border-varient-third::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 42px;
     padding: 1px;
     background: var(--background-linear-gradient);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
