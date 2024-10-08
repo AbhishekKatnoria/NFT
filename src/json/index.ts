@@ -298,15 +298,15 @@ export const DefinitionImportanceData = {
     },
     {
       img: "/Governance/co.png",
-      heading: "$ AI Token",
+      heading: "Community",
       subHeading:
-        "An AI token is a blockchain-based digital asset used in AI ecosystems to facilitate transactions, incentivize participation, and enable governance. It acts as the primary currency for buying, selling, or leasing AI models and services, and provides access to premium features. Tokens also offer governance rights, allowing holders to vote on platform decisions, and can be used to reward developers and data providers. Additionally, AI tokens may be integrated with DeFi protocols, enhancing their utility and liquidity.",
+        "An AI community is a collective of individuals and organizations engaged in the development, sharing, and application of artificial intelligence technologies. It serves as a platform for collaboration, knowledge exchange, and innovation, where members can discuss trends, share research, and solve challenges collectively. The community includes AI researchers, developers, data scientists, and enthusiasts who contribute to advancing AI, fostering a supportive environment for learning and growth.",
     },
     {
       img: "/Governance/people.png",
-      heading: "$ AI Token",
+      heading: "Foundation",
       subHeading:
-        "An AI token is a blockchain-based digital asset used in AI ecosystems to facilitate transactions, incentivize participation, and enable governance. It acts as the primary currency for buying, selling, or leasing AI models and services, and provides access to premium features. Tokens also offer governance rights, allowing holders to vote on platform decisions, and can be used to reward developers and data providers. Additionally, AI tokens may be integrated with DeFi protocols, enhancing their utility and liquidity.",
+        "An AI Foundation is an organization dedicated to advancing artificial intelligence research, development, and ethical practices. It typically supports projects, conducts research, and provides resources to drive innovation and address challenges in AI technology. The foundation may focus on fostering collaboration between researchers, developers, and industry leaders, promoting responsible AI use, and ensuring the technology benefits society as a whole.",
     },
   ],
 };

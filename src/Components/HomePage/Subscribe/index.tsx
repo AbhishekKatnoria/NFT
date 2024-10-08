@@ -3,7 +3,7 @@ import Button from '../../Button';
 
 const Subscribe = () => {
   return (
-    <div className='my-[220px] gradient-border'>
+    <div className='mt-[220px] mb-[120px] gradient-border'>
       <div className='flex flex-col justify-center items-center py-[60px] px-4 bg-backgroundBlack'>{SubscribeData?.heading && <h2 className='mb-[24px]'>
         {SubscribeData?.heading}
       </h2>}
