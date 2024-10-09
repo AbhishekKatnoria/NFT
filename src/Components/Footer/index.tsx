@@ -7,7 +7,7 @@ const Footer = () => {
                 {
                     FooterData?.map((item, i) => (
                         <>
-                            <div className="flex justify-between items-center mb-[18px]">
+                            <div className="flex justify-between items-center mb-[18px]" key={i}>
                                 {item?.logo && <img src={item?.logo} key={i} />}
                                 {item?.icons && <div className="flex justify-center items-center gap-6">
                                     {item?.icons.map((items, index) => (
