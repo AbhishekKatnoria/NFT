@@ -1,12 +1,21 @@
 import AiCollection from "../../Components/HomePage/AiCollection";
 import Subscribe from "../../Components/HomePage/Subscribe";
-import { OurPopularAICollection } from "../../json";
+import { AllAiImages } from "../../json";
 
 const Collection = () => {
+
+  const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
+  const data = {
+    cards,
+    heading: AllAiImages.heading,
+    desc: AllAiImages.desc,
+    layout: AllAiImages.layout,
+  };
+
   return (
     <>
-      <AiCollection data={OurPopularAICollection}/>
-      <Subscribe/>
+      <AiCollection data={data} />
+      <Subscribe />
     </>
   )
 }

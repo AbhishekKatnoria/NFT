@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiCollectionProp } from "../../../Types";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,27 @@ interface AiCollection {
 const AiCollection = ({ data }: AiCollection) => {
   const AiCollectionData = data;
   const [active, setactive] = useState(0);
-  const navigate = useNavigate();
+
+  const [likes, setLikes] = useState<boolean[]>(Array(AiCollectionData?.cards && AiCollectionData?.cards.length).fill(false));
+  console.log(likes)
+  function handleChange({ items }: any) {
+    const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
+    const itemString = JSON.stringify(items);
+
+    const cardExists = cards.some((item: any) => JSON.stringify(item) === itemString);
+
+    if (!cardExists) {
+      cards.push(items);
+      localStorage.setItem("likes", JSON.stringify(cards));
+    }
+  }
+
+  function handleActive({ i }: any) {
+    console.log([...likes])
+    const updatedLikes = [...likes];
+    updatedLikes[i] = !updatedLikes[i];
+    setLikes(updatedLikes);
+  }
 
   return (
     <div className={`my-[120px] ${AiCollectionData?.layout ? "max-w-[1026px]" : "max-w-[1140px]"} w-full mx-auto text-center`}>
@@ -28,7 +48,7 @@ const AiCollection = ({ data }: AiCollection) => {
         ))}
       </ul>}
 
-      {AiCollectionData?.cards.length > 0 && <div className={`grid ${AiCollectionData?.layout ? "max-w-[772px] grid-cols-2 gap-x-7 gap-y-10 " : " grid-cols-3 gap-y-20 gap-x-3"} mt-[120px] w-full mx-auto`}>
+      {AiCollectionData?.cards && <div className={`grid ${AiCollectionData?.layout ? "max-w-[772px] grid-cols-2 gap-x-7 gap-y-10 " : " grid-cols-3 gap-y-20 gap-x-3"} mt-[120px] w-full mx-auto`}>
         {AiCollectionData?.cards?.map((items, i) => {
           const gridArea = i === 0
             ? "1 / 1 / 5 / 2"
@@ -50,8 +70,9 @@ const AiCollection = ({ data }: AiCollection) => {
                 <div className="my-[18px] mx-[24px] ">
                   <div className="flex justify-between items-center mb-2">
                     <h3>{items?.name}</h3>
-                    <img src={items?.like} alt="Like" onClick={() => { navigate('/aiImage'); }} className="cursor-pointer"
-                    />
+                    {
+                      <img src={likes[i] ? "/HomePage/heart.svg" : items?.like} alt="Like" onClick={() => { handleChange({ items }); handleActive({ i }); }} className="cursor-pointer"
+                      />}
                   </div>
                   <div className="flex justify-between items-center">
                     <p>Price</p>

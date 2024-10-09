@@ -1,5 +1,5 @@
 interface LayoutProp {
-  layout: boolean;
+  layout?: boolean;
 }
 interface WithLabel {
   label?: string;
@@ -39,11 +39,12 @@ export interface Cards extends Image {
   name: string;
   like: string;
   price: string;
+  id: number;
 }
 
 export interface AiCollectionProp extends Content, LayoutProp {
   categories?: Categories[];
-  cards: Cards[];
+  cards?: Cards[];
 }
 
 export interface DefinitionProps extends Categories {
