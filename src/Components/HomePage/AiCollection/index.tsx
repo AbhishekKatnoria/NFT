@@ -1,22 +1,31 @@
 import { useEffect, useState } from "react";
-import { AiCollectionProp } from "../../../Types";
+import { AiCollectionProp, Cards } from "../../../Types";
 import { useNavigate } from "react-router-dom";
 
 interface AiCollection {
   data: AiCollectionProp;
 }
 
+interface Items {
+  items: Cards;
+}
+
+interface Index {
+  i: number;
+}
+
+
 const AiCollection = ({ data }: AiCollection) => {
   const AiCollectionData = data;
   const [active, setactive] = useState(0);
 
   const [likes, setLikes] = useState<boolean[]>(Array(AiCollectionData?.cards && AiCollectionData?.cards.length).fill(false));
-  console.log(likes)
-  function handleChange({ items }: any) {
+
+  function handleChange({ items }: Items) {
     const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
     const itemString = JSON.stringify(items);
 
-    const cardExists = cards.some((item: any) => JSON.stringify(item) === itemString);
+    const cardExists = cards.some((item: Items) => JSON.stringify(item) === itemString);
 
     if (!cardExists) {
       cards.push(items);
@@ -24,7 +33,7 @@ const AiCollection = ({ data }: AiCollection) => {
     }
   }
 
-  function handleActive({ i }: any) {
+  function handleActive({ i }: Index) {
     console.log([...likes])
     const updatedLikes = [...likes];
     updatedLikes[i] = !updatedLikes[i];
