@@ -4,6 +4,7 @@ import Home from "./pages/homePage";
 import Layout from "./Components/Layout";
 import Collection from "./pages/collection";
 import Governance from "./pages/governance";
+import AiImages from "./pages/aiImage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" index element={<Home />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/governance" element={<Governance />} />
+          <Route path="/aiImage" element={<AiImages />} />
         </Route>
       </Routes>
     </BrowserRouter>
