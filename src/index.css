@@ -134,6 +134,7 @@ body {
 
   .gradient-border {
     position: relative;
+      border-radius: 8px;
   }
 
   .gradient-border::before {
@@ -148,6 +149,12 @@ body {
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     z-index: -1;
+  }
+
+  .gradient-border:hover {
+    border-radius: 8px;
+    background-color: #7a3d66;
+    transition: all .3s ease-in-out;
   }
 
   .gradient-border-varient-sec {

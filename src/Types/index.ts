@@ -32,14 +32,14 @@ export interface BannerProp {
 }
 
 export interface Categories {
-  title: string;
+  title?: string;
+  id?: number;
 }
 
-export interface Cards extends Image {
-  name: string;
-  like: string;
-  price: string;
-  id: number;
+export interface Cards extends Image, Categories {
+  name?: string;
+  like?: string;
+  price?: string;
 }
 
 export interface AiCollectionProp extends Content, LayoutProp {
