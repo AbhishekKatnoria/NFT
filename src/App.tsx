@@ -5,6 +5,7 @@ import Layout from "./Components/Layout";
 import Collection from "./pages/collection";
 import Governance from "./pages/governance";
 import AiImages from "./pages/aiImage";
+import Community from "./pages/community";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" index element={<Home />} />
           <Route path="/collection" element={<Collection />} />
+          <Route path="/community" element={<Community />} />
           <Route path="/governance" element={<Governance />} />
           <Route path="/aiImage" element={<AiImages />} />
         </Route>
