@@ -12,8 +12,6 @@ const Collection = () => {
     layout: AllAiImages.layout,
   };
 
-  console.log(data);
-
   return (
     <>
       <AiCollection data={data} />

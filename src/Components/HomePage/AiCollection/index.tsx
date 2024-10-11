@@ -17,18 +17,16 @@ interface ab {
   price: string;
 }
 
-
 const AiCollection = ({ data }: AiCollection) => {
   const AiCollectionData = data;
   const [active, setActive] = useState(0);
   const [category, setCategory] = useState<Cards[] | undefined>(undefined);
+  const [storageData, setStorageData] = useState<Cards[] | undefined>(undefined);
 
-  // const [likes, setLikes] = useState<boolean[]>(Array(AiCollectionData?.cards && AiCollectionData?.cards.length).fill(false));
-  // function handleActive({ i }: Index) {
-  //   const updatedLikes = [...likes];
-  //   updatedLikes[i] = !updatedLikes[i];
-  //   setLikes(updatedLikes);
-  // }
+  useEffect(() => {
+    const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
+    setStorageData(cards)
+  }, [])
 
   useEffect(() => {
     if (AiCollectionData?.categories && AiCollectionData.categories.length > 0) {
@@ -56,20 +54,34 @@ const AiCollection = ({ data }: AiCollection) => {
       }
     }
   }
-  function handleChange({ items }: AiCollection, cate: string) {
-    console.log('items', items)
-    console.log('cate', cate)
-    const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
-    console.log('cards', cards)
-    const itemString = JSON.stringify(items);
+  function handleChange({ items }: AiCollection) {
 
+    const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
+    const itemString = JSON.stringify(items);
     const cardExists = cards.some((item: Categories) => JSON.stringify(item) === itemString);
 
     if (!cardExists) {
       cards.push(items);
       localStorage.setItem("likes", JSON.stringify(cards));
+      setStorageData(cards);
     }
   }
+
+  function handleRemove(i: number) {
+
+    const exists = storageData?.some(item => item.id === i);
+    if (exists) {
+      if (storageData) {
+        const updatedData = storageData.filter(item => item.id !== i);
+        setStorageData(updatedData);
+        localStorage.setItem('likes', JSON.stringify(updatedData));
+        setTimeout(() => {
+          window.location.reload();
+        }, 300)
+      }
+    }
+  }
+
   return (
     <div className={`my-[120px] ${AiCollectionData?.layout ? "max-w-[1026px]" : "max-w-[1140px]"} w-full mx-auto text-center`}>
       <div className="max-w-[878px] mx-auto text-center mb-10">
@@ -106,8 +118,6 @@ const AiCollection = ({ data }: AiCollection) => {
                     ? "9 / 1 / 14 / 2"
                     : "10 / 2 / 14 / 3";
 
-          const cate = AiCollectionData?.categories?.find(item => item.id === active)?.title || "";
-
           return (
             <>
               <div className={`h-[367px] relative flex items-end`} key={i}
@@ -118,7 +128,12 @@ const AiCollection = ({ data }: AiCollection) => {
                   <div className="my-[18px] mx-[24px] ">
                     <div className="flex justify-between items-center mb-2">
                       <h3>{items?.name}</h3>
-                      <img src={false ? "/HomePage/heart.svg" : items?.like} alt="Like" onClick={() => { handleChange({ items }, cate) }} className="cursor-pointer"
+                      <img
+                        src={storageData?.some(item => item.id === items.id) ? "/HomePage/heart.svg" : items?.like}
+                        alt="Like"
+                        onClick={() => {
+                          handleChange({ items });
+                        }} className="cursor-pointer"
                       />
                     </div>
                     <div className="flex justify-between items-center">
@@ -149,9 +164,9 @@ const AiCollection = ({ data }: AiCollection) => {
                         <div className="flex justify-between items-center mb-2">
                           <h3>{items?.name}</h3>
                           <img
-                            src={false ? "/HomePage/heart.svg" : items.like}
+                            src={storageData?.some(item => item.id === items.id) ? "/HomePage/heart.svg" : items.like}
                             alt="Like"
-                            // onClick={() => { handleChange({ items }) }}
+                            onClick={() => { handleRemove(items?.id ?? 0) }}
                             className="cursor-pointer"
                           />
                         </div>
@@ -167,7 +182,6 @@ const AiCollection = ({ data }: AiCollection) => {
             </div>
           )}
         </>
-
       }
     </div>
   );
