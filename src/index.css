@@ -32,7 +32,7 @@
     linear-gradient(102.42deg, rgba(34, 9, 44, 0) -7.07%, #22092c 86.05%);
 
   /* Font */
-  --font-primary: "Bakbak One", cursive;
+  --font-primary: "Bakbak One", "cursive";
   --font-secondary: "Poppins", sans-serif;
   --font-third: "Inria Sans", sans-serif;
 

@@ -1,4 +1,3 @@
-import React from "react";
 import AiCollection from "../../Components/HomePage/AiCollection";
 import { MarketplaceData } from "../../json";
 
