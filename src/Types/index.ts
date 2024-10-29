@@ -44,6 +44,7 @@ export interface Cards extends Image, Categories {
 
 export interface AiCollectionProp extends Content, LayoutProp {
   categories?: Categories[];
+  category?: Categories[];
   cards?: Cards[];
 }
 

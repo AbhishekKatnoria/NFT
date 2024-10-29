@@ -6,6 +6,8 @@ import Collection from "./pages/collection";
 import Governance from "./pages/governance";
 import AiImages from "./pages/aiImage";
 import Community from "./pages/community";
+import MarketPlace from "./pages/market-place";
+import ItemDetail from "./pages/item-detail/[...id]";
 
 function App() {
   return (
@@ -14,8 +16,13 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" index element={<Home />} />
           <Route path="/collection" element={<Collection />} />
+          <Route path="/market-place" element={<MarketPlace />} />
           <Route path="/community" element={<Community />} />
           <Route path="/governance" element={<Governance />} />
+          <Route
+            path="/market-place/item-detail/:id"
+            element={<ItemDetail />}
+          />
           <Route path="/aiImage" element={<AiImages />} />
         </Route>
       </Routes>
