@@ -10,7 +10,7 @@ export const Nav = {
   links: [
     {
       label: "Collection",
-      href: "/Collection",
+      href: "/collection",
     },
     {
       label: "Marketplace",
