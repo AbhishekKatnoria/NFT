@@ -48,17 +48,13 @@ const Banner = ({ data }: Banner) => {
         <div className="flex relative max-w-[411px] w-full blueEffect">
           {BannerData?.images?.map((item, i) => (
             <div className={`bannerImages bannerImages${i + 1}`} key={i}>
-              <img src={item?.img} alt={item?.alt} />
+              <img src={item?.img} alt={item?.alt} loading="lazy" />
             </div>
           ))}
         </div>
       )}
 
-      {tip && (
-        <div onClick={() => settip(false)}>
-          <ConnectWallet />
-        </div>
-      )}
+      {tip && <ConnectWallet onClick={() => settip(false)} />}
     </div>
   );
 };
