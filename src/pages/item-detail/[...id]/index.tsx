@@ -72,7 +72,7 @@ const ItemDetail = () => {
                   <img
                     src="/AiCollectionImages/sub.svg"
                     alt=""
-                    className="w-[20px] h-[20px] aspect-square"
+                    className="w-[20px] h-[20px] aspect-square cursor-pointer"
                     onClick={handleSub}
                   />
                   <p className="text-3xl leading-9 font-inriasans font-bold">
@@ -81,7 +81,7 @@ const ItemDetail = () => {
                   <img
                     src="/AiCollectionImages/add.svg"
                     alt=""
-                    className="w-[20px] h-[20px] aspect-square"
+                    className="w-[20px] h-[20px] aspect-square cursor-pointer"
                     onClick={handleAdd}
                   />
                 </div>

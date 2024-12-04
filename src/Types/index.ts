@@ -8,6 +8,7 @@ export interface ButtonProps extends WithLabel {
   variant?: string;
   css?: string;
   children?: any;
+  onClick?: () => void;
 }
 
 export interface Button extends Image {
