@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { BannerProp } from "../../../Types";
 import Button from "../../Button";
+import ConnectWallet from "../../ConnectWallet";
 
 interface Banner {
   data: BannerProp;
@@ -7,6 +9,7 @@ interface Banner {
 
 const Banner = ({ data }: Banner) => {
   const BannerData = data;
+  const [tip, settip] = useState<boolean>(false);
   return (
     <div className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto">
       <div className="py-3 max-w-[594px] w-full">
@@ -21,7 +24,14 @@ const Banner = ({ data }: Banner) => {
           <div className="flex gap-[10px]">
             {BannerData?.content?.btns?.map((item, i) =>
               i === 0 ? (
-                <Button variant="filled" css="rounded-[42px]" key={i}>
+                <Button
+                  variant="filled"
+                  css="rounded-[42px]"
+                  key={i}
+                  onClick={() => {
+                    settip(true);
+                  }}
+                >
                   <img src={`${item?.img}`} alt="Wallet" />
                   {item?.label}
                 </Button>
@@ -41,6 +51,12 @@ const Banner = ({ data }: Banner) => {
               <img src={item?.img} alt={item?.alt} />
             </div>
           ))}
+        </div>
+      )}
+
+      {tip && (
+        <div onClick={() => settip(false)}>
+          <ConnectWallet />
         </div>
       )}
     </div>
