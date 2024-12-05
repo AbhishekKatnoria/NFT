@@ -9,7 +9,7 @@ const ConnectWallet = ({ onClick, settip }: any) => {
           <img
             src="/HomePage/cross.svg"
             alt=""
-            className="p-2 text-end"
+            className="p-2 text-end cursor-pointer"
             loading="lazy"
             onClick={() => {
               onClick();
@@ -31,7 +31,7 @@ const ConnectWallet = ({ onClick, settip }: any) => {
           <Button
             label={"Sign in  with wallet"}
             variant="filled"
-            css="rounded-[42px]"
+            css="rounded-[42px] w-[341px] flex justify-center border-[0.5px]"
           ></Button>
         </div>
       </div>
