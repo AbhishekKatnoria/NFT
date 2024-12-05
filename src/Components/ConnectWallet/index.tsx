@@ -1,10 +1,13 @@
 import Button from "../Button";
 
-const ConnectWallet = ({ onClick, settip }: any) => {
-  console.log(onClick);
+interface Data {
+  onClick(): void;
+}
+
+const ConnectWallet = ({ onClick }: Data) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-screen h-screen z-40">
-      <div className="bg-black rounded-lg shadow-lg w-[441px] h-[355px]">
+    <div className="fixed inset-0 flex items-center justify-center bg-black w-screen h-screen z-40 bg-opacity-70">
+      <div className="bg-black rounded-lg shadow-lg w-[441px] h-[355px] gradient-border z-10">
         <div className="flex justify-end pt-4 pr-4">
           <img
             src="/HomePage/cross.svg"
@@ -16,7 +19,7 @@ const ConnectWallet = ({ onClick, settip }: any) => {
             }}
           />
         </div>
-        <div className=" px-[50px] pt-[26px] pb-[40px]  flex flex-col justify-center items-center gap-4">
+        <div className=" px-[50px] pb-[40px]  flex flex-col justify-center items-center gap-4">
           <img
             src="/HomePage/conncetwallet.svg"
             alt=""
