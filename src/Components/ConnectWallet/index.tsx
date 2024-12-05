@@ -1,7 +1,6 @@
 import Button from "../Button";
 
-const ConnectWallet = ({ onClick, settip }: any) => {
-  console.log(onClick);
+const ConnectWallet = ({ onClick }: any) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-screen h-screen z-40">
       <div className="bg-black rounded-lg shadow-lg w-[441px] h-[355px]">
@@ -16,7 +15,7 @@ const ConnectWallet = ({ onClick, settip }: any) => {
             }}
           />
         </div>
-        <div className=" px-[50px] pt-[26px] pb-[40px]  flex flex-col justify-center items-center gap-4">
+        <div className=" px-[50px]  pb-[40px]  flex flex-col justify-center items-center gap-4">
           <img
             src="/HomePage/conncetwallet.svg"
             alt=""
@@ -29,7 +28,7 @@ const ConnectWallet = ({ onClick, settip }: any) => {
             transactions on our platform.
           </p>
           <Button
-            label={"Sign in  with wallet"}
+            label={"Sign in with wallet"}
             variant="filled"
             css="rounded-[42px] w-[341px] flex justify-center border-[0.5px]"
           ></Button>
