@@ -1,6 +1,6 @@
-import React from "react";
+import { Data } from "../ConnectWallet";
 
-const Wallet = () => {
+const Wallet = ({ onClick }: Data) => {
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-black w-screen h-screen z-40 bg-opacity-70">
       <div className="bg-black rounded-lg shadow-lg w-[441px] h-[355px] gradient-border z-10">
@@ -11,6 +11,7 @@ const Wallet = () => {
             className="p-2 text-end cursor-pointer"
             loading="lazy"
             onClick={() => {
+              onClick();
             }}
           />
         </div>

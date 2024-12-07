@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../Button";
 import Wallet from "../Wallet";
 
-interface Data {
+export interface Data {
   onClick(): void;
 }
 
@@ -47,7 +47,11 @@ const ConnectWallet = ({ onClick }: Data) => {
           </div>
         </div>
       ) : (
-        <Wallet />
+        <Wallet
+          onClick={() => {
+            onClick();
+          }}
+        />
       )}
     </div>
   );
