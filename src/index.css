@@ -14,7 +14,7 @@
 
 :root {
   /* background */
-  --background-color: #22092c;
+  --background-color: #130717;
   --background-color-sec: #241228;
   --background-black: #00000033;
   --border-color: #311b3b;
@@ -197,11 +197,11 @@ body {
     z-index: -1;
   }
 
-  .gradient-border:hover {
+  /* .gradient-border:hover {
     border-radius: 8px;
     background-color: #7a3d66;
     transition: all 0.3s ease-in-out;
-  }
+  } */
 
   .gradient-border-varient-sec {
     position: relative;
