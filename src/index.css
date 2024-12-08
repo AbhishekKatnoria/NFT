@@ -26,10 +26,10 @@
   );
   --background-linear-gradient-sec: linear-gradient(
       171.03deg,
-      rgba(34, 9, 44, 0) -0.1%,
-      #22092c 85.39%
+      rgba(19, 7, 23, 0) -0.1%,
+      #130717 85.39%
     ),
-    linear-gradient(102.42deg, rgba(34, 9, 44, 0) -7.07%, #22092c 86.05%);
+    linear-gradient(102.42deg, rgba(19, 7, 23, 0) -7.07%, #130717 86.05%);
 
   /* Font */
   --font-primary: "Bakbak One", "cursive";
