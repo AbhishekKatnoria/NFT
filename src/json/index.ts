@@ -560,19 +560,22 @@ export const MarketplaceData = {
   ],
 };
 
-export const Wallet = {
-  category: [
+export const WalletData = {
+  walletCategory: [
     {
       img: "/HomePage/wallet1.svg",
       heading: "Coinbase wallet",
+      href:"https://www.coinbase.com/en-gb/wallet",
     },
     {
       img: "/HomePage/wallet2.svg",
       heading: "Meta Mask wallet",
+      href:"https://metamask.io/",
     },
     {
       img: "/HomePage/wallet3.svg",
-      heading: "Wallet āConnect",
+      heading: "Wallet Connect",
+      href:"",  
     },
   ],
 };
