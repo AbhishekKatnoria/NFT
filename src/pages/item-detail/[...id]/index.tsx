@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Cards } from "../../../Types";
 import Subscribe from "../../../Components/HomePage/Subscribe";
+import AiCollection from "../../../Components/HomePage/AiCollection";
 
 const ItemDetail = () => {
   let { id } = useParams();
@@ -101,7 +102,7 @@ const ItemDetail = () => {
           ))}
         </div>
       </div>
-      
+      <AiCollection />
       <Subscribe />
     </>
   );
