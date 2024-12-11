@@ -581,6 +581,36 @@ export const WalletData = {
 };
 
 export const MoreInfoData = {
-  heading:"More Information",
-  
+  heading: "More From this collection",
+  layout: true,
+  category: [
+    {
+      id: 1,
+      img: "/HomePage/alien1.png",
+      name: "Cyborg Alien mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 2,
+      img: "/HomePage/alien2.png",
+      name: "Cyborg mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 3,
+      img: "/HomePage/alien3.png",
+      name: "Cyborg mecha Robo1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 4,
+      img: "/HomePage/alien4.png",
+      name: "Cyborg Girl mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+  ],
 };
