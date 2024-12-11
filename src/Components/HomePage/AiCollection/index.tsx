@@ -229,6 +229,9 @@ const AiCollection = ({ data }: AiCollection) => {
                       className={`h-[367px] relative flex items-end`}
                       key={i}
                       style={AiCollectionData?.layout ? { gridArea } : {}}
+                      onClick={(e) => {
+                        handleClick(items?.id, e);
+                      }}
                     >
                       <img
                         src={items?.img}
