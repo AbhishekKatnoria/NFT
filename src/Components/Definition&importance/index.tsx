@@ -1,4 +1,4 @@
-  import { DefinitionProps } from "../../Types";
+import { DefinitionProps } from "../../Types";
 
 interface Definition {
   data: DefinitionProps;

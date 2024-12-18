@@ -11,7 +11,7 @@ const Banner = ({ data }: Banner) => {
   const BannerData = data;
   const [tip, settip] = useState<boolean>(false);
   return (
-    <div className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto">
+    <div data-aos="fade-up" className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto">
       <div className="py-3 max-w-[594px] w-full">
         {BannerData?.content?.heading && (
           <h1

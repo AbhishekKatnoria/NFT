@@ -99,6 +99,7 @@ const AiCollection = ({ data }: AiCollection) => {
 
   return (
     <div
+      data-aos="fade-left"
       className={`my-[120px] ${
         AiCollectionData?.layout ? "max-w-[1026px]" : "max-w-[1140px]"
       } w-full mx-auto text-center`}
