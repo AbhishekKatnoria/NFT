@@ -2,7 +2,7 @@ import { StartJourneryData } from "../../../json";
 
 const StartJourney = () => {
   return (
-    <div className="mt-[275px] mb-[220px]">
+    <div data-aos="fade-right" className="mt-[275px] mb-[220px]">
       {StartJourneryData?.heading && (
         <h2
           className="text-center mb-[120px]"

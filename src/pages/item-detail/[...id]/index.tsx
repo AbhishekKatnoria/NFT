@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Cards } from "../../../Types";
 import Subscribe from "../../../Components/HomePage/Subscribe";
+import AiCollection from "../../../Components/HomePage/AiCollection";
+import { MoreInfoData } from "../../../json";
 
 const ItemDetail = () => {
   let { id } = useParams();
@@ -88,7 +90,12 @@ const ItemDetail = () => {
                     />
                   </div>
                   <div className="w-full max-w-[280px] bg-white bg-opacity-20 rounded-xl flex justify-center items-center gap-3 font-inriasans">
-                    <p className="text-[32px] leading-9 font-inriasans font-bold">
+                    <p
+                      className="text-[32px] leading-9 font-inriasans font-bold cursor-pointer"
+                      onClick={() => {
+                        console.log("first");
+                      }}
+                    >
                       Buy now for
                     </p>
                     <p className="text-[32px] leading-9 font-inriasans font-bold">
@@ -101,7 +108,7 @@ const ItemDetail = () => {
           ))}
         </div>
       </div>
-      
+      <AiCollection data={MoreInfoData} />
       <Subscribe />
     </>
   );

@@ -565,17 +565,52 @@ export const WalletData = {
     {
       img: "/HomePage/wallet1.svg",
       heading: "Coinbase wallet",
-      href:"https://www.coinbase.com/en-gb/wallet",
+      href: "https://www.coinbase.com/en-gb/wallet",
     },
     {
       img: "/HomePage/wallet2.svg",
       heading: "Meta Mask wallet",
-      href:"https://metamask.io/",
+      href: "https://metamask.io/",
     },
     {
       img: "/HomePage/wallet3.svg",
       heading: "Wallet Connect",
-      href:"",  
+      href: "",
+    },
+  ],
+};
+
+export const MoreInfoData = {
+  heading: "More From this collection",
+  layout: true,
+  category: [
+    {
+      id: 1,
+      img: "/HomePage/alien1.png",
+      name: "Cyborg Alien mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 2,
+      img: "/HomePage/alien2.png",
+      name: "Cyborg mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 3,
+      img: "/HomePage/alien3.png",
+      name: "Cyborg mecha Robo1",
+      like: "/HomePage/like.svg",
+      price: "20$",
+    },
+    {
+      id: 4,
+      img: "/HomePage/alien4.png",
+      name: "Cyborg Girl mecha1",
+      like: "/HomePage/like.svg",
+      price: "20$",
     },
   ],
 };
