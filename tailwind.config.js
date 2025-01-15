@@ -20,7 +20,8 @@ export default {
       },
       colors: {
         backgroundBlack: "var(--background-black)",
-        background: "var( --background-color)",
+        background: "var(--background-color)",
+        backgroundSec: "var(--background-color-sec)",
         textColor: "var(--primary-text)",
         gradient: "var(--background-linear-gradient)",
         gradientSec: "var(--background-linear-gradient-sec)",

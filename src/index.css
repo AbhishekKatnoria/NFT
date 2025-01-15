@@ -14,18 +14,25 @@
 
 :root {
   /* background */
-  --background-color: #22092c;
+  --background-color: #130717;
+  --background-color-sec: #241228;
   --background-black: #00000033;
   --border-color: #311b3b;
-  --backgrond-trans: transparent;
-  --background-linear-gradient: linear-gradient(112.86deg,
-      #47295c 39.86%,
-      #c4528a 91.52%);
-  --background-linear-gradient-sec: linear-gradient(171.03deg, rgba(34, 9, 44, 0) -0.1%, #22092C 85.39%),
-    linear-gradient(102.42deg, rgba(34, 9, 44, 0) -7.07%, #22092C 86.05%);
+  --background-trans: transparent;
+  --background-linear-gradient: linear-gradient(
+    112.86deg,
+    #47295c 39.86%,
+    #c4528a 91.52%
+  );
+  --background-linear-gradient-sec: linear-gradient(
+      171.03deg,
+      rgba(19, 7, 23, 0) -0.1%,
+      #130717 85.39%
+    ),
+    linear-gradient(102.42deg, rgba(19, 7, 23, 0) -7.07%, #130717 86.05%);
 
   /* Font */
-  --font-primary: "Bakbak One", cursive;
+  --font-primary: "Bakbak One", "cursive";
   --font-secondary: "Poppins", sans-serif;
   --font-third: "Inria Sans", sans-serif;
 
@@ -76,22 +83,78 @@ body {
     @apply font-poppins text-fontBase leading-lineHeightBase;
   }
 
+  span {
+    @apply font-poppins text-fontSm leading-lineHeightSm3;
+  }
+
   button {
     @apply font-inriasans text-fontBase font-bold leading-lineHeightSm3;
+  }
+
+  .banner {
+    position: relative;
+  }
+
+  .banner::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #776ae3 0%, #551863 100%);
+    border-radius: 50%;
+    filter: blur(120px);
+    width: 231px;
+    height: 231px;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+  }
+
+  .journey {
+    position: relative;
+  }
+
+  .journey::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #776ae3 0%, #551863 100%);
+    border-radius: 50%;
+    filter: blur(120px);
+    width: 180px;
+    height: 180px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  .journey::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, #776ae3 0%, #551863 100%);
+    border-radius: 50%;
+    filter: blur(120px);
+    width: 180px;
+    height: 180px;
+    z-index: -1;
+    top: 0;
+    right: 0;
   }
 }
 
 @layer utilities {
   .bg-gradient-filled {
-    background-image: var(--background-linear-gradient);
+    background: var(--background-linear-gradient);
+    transition: all 0.5s ease;
+  }
+  .bg-gradient-filled:hover {
+    background: var(--backgrond-trans);
   }
 
   .bg-gradient-transparent {
     background-image: transparent;
+    border: none;
   }
 
-  .bg-gradient-filled:hover {
-    background-image: var(--backgrond-trans);
+  .bg-gradient-transparent:hover {
+    background-image: var(--background-linear-gradient);
   }
 
   .br-gradient-filled {
@@ -118,24 +181,64 @@ body {
 
   .gradient-border {
     position: relative;
+    border-radius: 8px;
   }
 
   .gradient-border::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1px;
     background: var(--background-linear-gradient);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+  }
+
+  /* .gradient-border:hover {
+    border-radius: 8px;
+    background-color: #7a3d66;
+    transition: all 0.3s ease-in-out;
+  } */
+
+  .gradient-border-varient-sec {
+    position: relative;
+  }
+
+  .gradient-border-varient-sec::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 1px;
+    background: var(--background-linear-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+  }
+
+  .gradient-border-varient-third {
+    position: relative;
+  }
+
+  .gradient-border-varient-third::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 42px;
+    padding: 1px;
+    background: var(--background-linear-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     z-index: -1;
   }
 
   .background-grident {
-    background: linear-gradient(112.86deg,
-        #47295c 39.86%,
-        #c4528a 91.52%);
+    background: linear-gradient(112.86deg, #47295c 39.86%, #c4528a 91.52%);
     border-radius: 8px;
     box-shadow: 0px 4px 110.5px 0px #00000040;
   }
@@ -144,12 +247,14 @@ body {
     background: var(--background-linear-gradient);
     box-shadow: 0px 8px 150px 0px #00000080;
     border-radius: 8px;
-    transition: all var(--background-linear-gradient) .5s ease-in;
+    transition: all var(--background-linear-gradient) 0.5s ease-in;
   }
 
-  .abc {
-    backdrop-filter: blur(103.4000015258789px);
-    background: #FFFFFF33 20%;
+  .blur-bg {
+    background: #ffffff33;
+    backdrop-filter: blur(20.4px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .border-underline {
