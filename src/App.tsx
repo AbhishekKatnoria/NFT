@@ -11,6 +11,7 @@ import ItemDetail from "./pages/item-detail/[...id]";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SignIn from "./pages/sign-in";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/sign-in" element={<SignIn />} />
         <Route element={<Layout />}>
           <Route path="/" index element={<Home />} />
           <Route path="/collection" element={<Collection />} />
