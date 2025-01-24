@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SignIn from "./pages/sign-in";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/sign-in" element={<SignIn />} />
         <Route element={<Layout />}>
