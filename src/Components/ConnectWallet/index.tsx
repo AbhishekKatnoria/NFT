@@ -42,7 +42,7 @@ const ConnectWallet = ({ onClick }: Data) => {
                 variant="filled"
                 css="rounded-[42px] w-[341px] flex justify-center border-[0.5px]"
                 onClick={() => {
-                  setWallet(!wallet);
+                  setWallet(true);
                 }}
               ></Button>
             </div>

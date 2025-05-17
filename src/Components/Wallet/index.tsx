@@ -20,7 +20,7 @@ const Wallet = ({ onClick }: Data) => {
         <div className="flex justify-center items-center pt-5 flex-col gap-5 mb-[30px]">
           <h2 className="text-[40px] leading-[120%]">Connect Wallet</h2>
           {WalletData?.walletCategory?.length > 0 &&
-            WalletData?.walletCategory.map((items, index) => (
+            WalletData?.walletCategory?.map((items, index) => (
               <Link
                 to={items?.href}
                 className="bg-white/20 w-full max-w-[341px] rounded-xl flex gap-4 px-10 py-[14px] cursor-pointer items-center"
