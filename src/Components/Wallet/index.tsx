@@ -12,6 +12,8 @@ const Wallet = ({ onClick }: Data) => {
             alt=""
             className="p-2 text-end cursor-pointer"
             loading="lazy"
+            width="27"
+            height="27"
             onClick={() => {
               onClick();
             }}
