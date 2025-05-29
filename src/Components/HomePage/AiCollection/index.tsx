@@ -44,6 +44,7 @@ const AiCollection = ({ data }: AiCollection) => {
     }
   }, [AiCollectionData]);
 
+  // Function to handle category selection
   function handleCategories({ id }: Categories) {
     setActive(id ?? 0);
     if (AiCollectionData) {
@@ -63,6 +64,8 @@ const AiCollection = ({ data }: AiCollection) => {
       }
     }
   }
+
+  // Function to handle adding/removing items from local storage
   const handleChange = ({ items }: AiCollection, event: any) => {
     event.stopPropagation();
     const cards = JSON.parse(localStorage.getItem("likes") || "[]");
@@ -78,6 +81,7 @@ const AiCollection = ({ data }: AiCollection) => {
     }
   };
 
+  // Function to handle removing items from local storage
   function handleRemove(i: number) {
     const exists = storageData?.some((item) => item.id === i);
     if (exists) {
@@ -92,10 +96,23 @@ const AiCollection = ({ data }: AiCollection) => {
     }
   }
 
+  // Function to handle item click and navigate to item detail page
   const handleClick = (itemId: any, event: any) => {
     event.stopPropagation();
     navigate(`/market-place/item-detail/${itemId}`);
   };
+
+  // // Effect to navigate to collection page after 2 seconds if storageData has items
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    if (storageData && storageData.length >= 2) {
+      timeoutId = setTimeout(() => {
+        navigate("/collection");
+      }, 2000);
+    }
+    return () => clearTimeout(timeoutId);
+  }, [storageData, navigate]);
 
   return (
     <div
@@ -154,15 +171,21 @@ const AiCollection = ({ data }: AiCollection) => {
                 : i === 4
                 ? "9 / 1 / 14 / 2"
                 : "10 / 2 / 14 / 3";
-
+            const isItemInStorage = storageData?.some(
+              (item) => item.id === items.id
+            );
             return (
               <>
                 <div
-                  className={`h-[367px] relative flex items-end cursor-pointer`}
+                  className={`h-[367px] relative flex items-end ${
+                    isItemInStorage ? "cursor-pointer" : ""
+                  }`}
                   key={i}
                   style={AiCollectionData?.layout ? { gridArea } : {}}
                   onClick={(e) => {
-                    handleClick(items?.id, e);
+                    if (isItemInStorage) {
+                      handleClick(items?.id, e);
+                    }
                   }}
                 >
                   <img
@@ -177,7 +200,7 @@ const AiCollection = ({ data }: AiCollection) => {
                         <h3>{items?.name}</h3>
                         <img
                           src={
-                            storageData?.some((item) => item.id === items.id)
+                            isItemInStorage
                               ? "/HomePage/heart.svg"
                               : items?.like
                           }
@@ -185,7 +208,7 @@ const AiCollection = ({ data }: AiCollection) => {
                           onClick={(e) => {
                             handleChange({ items }, e);
                           }}
-                          className="cursor-pointer"
+                          className="cursor-pointer transition-transform duration-300 hover:scale-125"
                         />
                       </div>
                       <div className="flex justify-between items-center">
@@ -227,7 +250,7 @@ const AiCollection = ({ data }: AiCollection) => {
 
                   return (
                     <div
-                      className={`h-[367px] relative flex items-end`}
+                      className={`h-[367px] relative flex items-end cursor-pointer`}
                       key={i}
                       style={AiCollectionData?.layout ? { gridArea } : {}}
                       onClick={(e) => {
@@ -252,10 +275,11 @@ const AiCollection = ({ data }: AiCollection) => {
                                   : items.like
                               }
                               alt="Like"
-                              onClick={() => {
+                              onClick={(e) => {
+                                e.stopPropagation();
                                 handleRemove(items?.id ?? 0);
                               }}
-                              className="cursor-pointer"
+                              className="cursor-pointer transition-transform duration-300 hover:scale-125"
                             />
                           </div>
                           <div className="flex justify-between items-center">

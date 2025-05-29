@@ -12,6 +12,8 @@ const Wallet = ({ onClick }: Data) => {
             alt=""
             className="p-2 text-end cursor-pointer"
             loading="lazy"
+            width="27"
+            height="27"
             onClick={() => {
               onClick();
             }}
@@ -32,7 +34,7 @@ const Wallet = ({ onClick }: Data) => {
             ))}
         </div>
         <span className="text-center inline-block text-fontXs text-white/70 pb-10">
-          We do not own your private keys and cannot access your funds without
+          We do not own your private keys and cannot access your funds withou t
           your confirmation
         </span>
       </div>

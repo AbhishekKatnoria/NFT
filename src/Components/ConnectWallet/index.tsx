@@ -29,7 +29,8 @@ const ConnectWallet = ({ onClick }: Data) => {
               <img
                 src="/HomePage/conncetwallet.svg"
                 alt=""
-                className="w-[57px] h-[57px]"
+                width="57"
+                height="57"
                 loading="lazy"
               />
               <h2 className="text-[40px] leading-[120%]">Connect Wallet</h2>
