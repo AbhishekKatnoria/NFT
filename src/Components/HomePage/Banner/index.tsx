@@ -8,19 +8,11 @@ interface Banner {
 }
 
 const Banner = ({ data }: Banner) => {
-  const [hasLoaded, setHasLoaded] = useState<boolean>(false);
   const BannerData = data;
   const [tip, settip] = useState<boolean>(false);
 
-  // Set hasLoaded to true once the component is mounted (page is loaded)
-  useEffect(() => {
-    setHasLoaded(true);
-  }, []);
   return (
-    <div
-      data-aos={!hasLoaded ? "fade-up" : ""}
-      className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto"
-    >
+    <div className="flex mt-[114px] gap-[105px] max-w-[1111px] mx-auto">
       <div className="py-3 max-w-[594px] w-full">
         {BannerData?.content?.heading && (
           <h1

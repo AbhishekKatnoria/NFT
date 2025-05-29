@@ -12,6 +12,8 @@ const Wallet = ({ onClick }: Data) => {
             alt=""
             className="p-2 text-end cursor-pointer"
             loading="lazy"
+            width="27"
+            height="27"
             onClick={() => {
               onClick();
             }}
@@ -20,7 +22,7 @@ const Wallet = ({ onClick }: Data) => {
         <div className="flex justify-center items-center pt-5 flex-col gap-5 mb-[30px]">
           <h2 className="text-[40px] leading-[120%]">Connect Wallet</h2>
           {WalletData?.walletCategory?.length > 0 &&
-            WalletData?.walletCategory.map((items, index) => (
+            WalletData?.walletCategory?.map((items, index) => (
               <Link
                 to={items?.href}
                 className="bg-white/20 w-full max-w-[341px] rounded-xl flex gap-4 px-10 py-[14px] cursor-pointer items-center"
@@ -32,7 +34,7 @@ const Wallet = ({ onClick }: Data) => {
             ))}
         </div>
         <span className="text-center inline-block text-fontXs text-white/70 pb-10">
-          We do not own your private keys and cannot access your funds without
+          We do not own your private keys and cannot access your funds withou t
           your confirmation
         </span>
       </div>
