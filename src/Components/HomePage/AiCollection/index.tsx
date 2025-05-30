@@ -172,7 +172,7 @@ const AiCollection = ({ data }: AiCollection) => {
                 ? "9 / 1 / 14 / 2"
                 : "10 / 2 / 14 / 3";
             const isItemInStorage = storageData?.some(
-              (item) => item.id === items.id
+              (item) => item?.id === items?.id
             );
             return (
               <>
@@ -234,7 +234,7 @@ const AiCollection = ({ data }: AiCollection) => {
                     : " grid-cols-3 gap-y-20 gap-x-3"
                 } mt-[120px] w-full mx-auto`}
               >
-                {AiCollectionData?.cards.map((items: Cards, i) => {
+                {AiCollectionData?.cards?.map((items: Cards, i) => {
                   const gridArea =
                     i === 0
                       ? "1 / 1 / 5 / 2"
@@ -269,10 +269,10 @@ const AiCollection = ({ data }: AiCollection) => {
                             <img
                               src={
                                 storageData?.some(
-                                  (item) => item.id === items.id
+                                  (item) => item?.id === items?.id
                                 )
                                   ? "/HomePage/heart.svg"
-                                  : items.like
+                                  : items?.like
                               }
                               alt="Like"
                               onClick={(e) => {
