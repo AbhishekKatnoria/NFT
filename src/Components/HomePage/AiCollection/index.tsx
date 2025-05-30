@@ -1,20 +1,10 @@
 import { useEffect, useState } from "react";
 import { AiCollectionProp, Cards, Categories } from "../../../Types";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface AiCollection {
   data?: AiCollectionProp;
   items?: Cards;
-}
-
-interface Index {
-  i: number;
-}
-
-interface ab {
-  name: string;
-  like: string;
-  price: string;
 }
 
 const AiCollection = ({ data }: AiCollection) => {
@@ -25,6 +15,7 @@ const AiCollection = ({ data }: AiCollection) => {
     undefined
   );
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const cards = JSON.parse(localStorage.getItem(`likes`) || "[]");
@@ -106,13 +97,13 @@ const AiCollection = ({ data }: AiCollection) => {
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
 
-    if (storageData && storageData.length >= 2) {
+    if (location?.pathname === "/" && storageData && storageData.length >= 2) {
       timeoutId = setTimeout(() => {
         navigate("/collection");
       }, 2000);
     }
     return () => clearTimeout(timeoutId);
-  }, [storageData, navigate]);
+  }, [storageData, navigate, location]);
 
   return (
     <div
