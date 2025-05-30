@@ -7,6 +7,7 @@ const Navbar = () => {
   const location = useLocation();
   const [url, setUrl] = useState<String>("");
   const [active, setActive] = useState<number | null>(null);
+
   useEffect(() => {
     setUrl(location.pathname);
   }, [location]);
@@ -24,23 +25,25 @@ const Navbar = () => {
           </Link>
         </div>
       )}
+
       {Nav?.links.length > 0 && (
         <div className="flex font-poppins">
           <ul className="flex gap-7">
             {Nav?.links?.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="relative group">
                 <Link
                   to={item.href}
                   onClick={() => {
                     handleClick(index);
                   }}
-                  className={`${
+                  className={`text-white px-3 py-1 inline-block relative ${
                     url === item.href && active === index
                       ? "border-b-2 border-blue-800"
                       : ""
                   }`}
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
             ))}
@@ -51,7 +54,6 @@ const Navbar = () => {
       {Nav?.checkout?.img && Nav?.button?.label && (
         <div className="flex gap-3">
           <Button variant="filled" css="rounded-[42px]">
-            {" "}
             <img src={Nav?.button?.img} alt="Checkout" />
             {Nav?.button?.label}
           </Button>
