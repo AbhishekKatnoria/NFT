@@ -26,23 +26,23 @@ const Navbar = () => {
         </div>
       )}
 
-      {Nav?.links.length > 0 && (
+      {Nav?.links?.length > 0 && (
         <div className="flex font-poppins">
           <ul className="flex gap-7">
             {Nav?.links?.map((item, index) => (
               <li key={index} className="relative group">
                 <Link
-                  to={item.href}
+                  to={item?.href}
                   onClick={() => {
                     handleClick(index);
                   }}
-                  className={`text-white px-3 py-1 inline-block relative ${
-                    url === item.href && active === index
-                      ? "border-b-2 border-blue-800"
+                  className={`text-white/100 px-3 py-1 inline-block relative ${
+                    url === item?.href && active === index
+                      ? "text-white font-semibold"
                       : ""
                   }`}
                 >
-                  {item.label}
+                  {item?.label}
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
