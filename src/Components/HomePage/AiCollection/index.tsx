@@ -1,20 +1,10 @@
 import { useEffect, useState } from "react";
 import { AiCollectionProp, Cards, Categories } from "../../../Types";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface AiCollection {
   data?: AiCollectionProp;
   items?: Cards;
-}
-
-interface Index {
-  i: number;
-}
-
-interface ab {
-  name: string;
-  like: string;
-  price: string;
 }
 
 const AiCollection = ({ data }: AiCollection) => {
@@ -25,6 +15,7 @@ const AiCollection = ({ data }: AiCollection) => {
     undefined
   );
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const cards = JSON.parse(localStorage.getItem(`likes`) || "[]");
@@ -106,13 +97,13 @@ const AiCollection = ({ data }: AiCollection) => {
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
 
-    if (storageData && storageData.length >= 2) {
+    if (location?.pathname === "/" && storageData && storageData.length >= 2) {
       timeoutId = setTimeout(() => {
         navigate("/collection");
       }, 2000);
     }
     return () => clearTimeout(timeoutId);
-  }, [storageData, navigate]);
+  }, [storageData, navigate, location]);
 
   return (
     <div
@@ -172,7 +163,7 @@ const AiCollection = ({ data }: AiCollection) => {
                 ? "9 / 1 / 14 / 2"
                 : "10 / 2 / 14 / 3";
             const isItemInStorage = storageData?.some(
-              (item) => item.id === items.id
+              (item) => item?.id === items?.id
             );
             return (
               <>
@@ -234,7 +225,7 @@ const AiCollection = ({ data }: AiCollection) => {
                     : " grid-cols-3 gap-y-20 gap-x-3"
                 } mt-[120px] w-full mx-auto`}
               >
-                {AiCollectionData?.cards.map((items: Cards, i) => {
+                {AiCollectionData?.cards?.map((items: Cards, i) => {
                   const gridArea =
                     i === 0
                       ? "1 / 1 / 5 / 2"
@@ -269,10 +260,10 @@ const AiCollection = ({ data }: AiCollection) => {
                             <img
                               src={
                                 storageData?.some(
-                                  (item) => item.id === items.id
+                                  (item) => item?.id === items?.id
                                 )
                                   ? "/HomePage/heart.svg"
-                                  : items.like
+                                  : items?.like
                               }
                               alt="Like"
                               onClick={(e) => {

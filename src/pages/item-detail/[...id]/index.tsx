@@ -99,7 +99,7 @@ const ItemDetail = () => {
                       Buy now for
                     </p>
                     <p className="text-[32px] leading-9 font-inriasans font-bold">
-                      {count * price}$
+                      ${count * price}
                     </p>
                   </div>
                 </div>
