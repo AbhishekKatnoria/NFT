@@ -72,18 +72,14 @@ const AiCollection = ({ data }: AiCollection) => {
     }
   };
 
-  // Function to handle removing items from local storage
+  // // Function to handle removing items from local storage
+
   function handleRemove(i: number) {
     const exists = storageData?.some((item) => item.id === i);
-    if (exists) {
-      if (storageData) {
-        const updatedData = storageData.filter((item) => item.id !== i);
-        setStorageData(updatedData);
-        localStorage.setItem("likes", JSON.stringify(updatedData));
-        setTimeout(() => {
-          window.location.reload();
-        }, 300);
-      }
+    if (exists && storageData) {
+      const updatedData = storageData.filter((item) => item.id !== i);
+      setStorageData(updatedData);
+      localStorage.setItem("likes", JSON.stringify(updatedData));
     }
   }
 
@@ -215,75 +211,73 @@ const AiCollection = ({ data }: AiCollection) => {
         </div>
       ) : (
         <>
-          {AiCollectionData &&
-            AiCollectionData?.cards &&
-            AiCollectionData?.cards.length > 0 && (
-              <div
-                className={`grid ${
-                  AiCollectionData?.layout
-                    ? "max-w-[772px] grid-cols-2 gap-x-7 gap-y-10 "
-                    : " grid-cols-3 gap-y-20 gap-x-3"
-                } mt-[120px] w-full mx-auto`}
-              >
-                {AiCollectionData?.cards?.map((items: Cards, i) => {
-                  const gridArea =
-                    i === 0
-                      ? "1 / 1 / 5 / 2"
-                      : i === 1
-                      ? "2 / 2 / 6 / 3"
-                      : i === 2
-                      ? "5 / 1 / 9 / 2"
-                      : i === 3
-                      ? "6 / 2 / 10 / 3"
-                      : i === 4
-                      ? "9 / 1 / 14 / 2"
-                      : "10 / 2 / 14 / 3";
+          {AiCollectionData && storageData && (
+            <div
+              className={`grid ${
+                AiCollectionData?.layout
+                  ? "max-w-[772px] grid-cols-2 gap-x-7 gap-y-10 "
+                  : " grid-cols-3 gap-y-20 gap-x-3"
+              } mt-[120px] w-full mx-auto`}
+            >
+              {storageData?.map((items: Cards, i) => {
+                const gridArea =
+                  i === 0
+                    ? "1 / 1 / 5 / 2"
+                    : i === 1
+                    ? "2 / 2 / 6 / 3"
+                    : i === 2
+                    ? "5 / 1 / 9 / 2"
+                    : i === 3
+                    ? "6 / 2 / 10 / 3"
+                    : i === 4
+                    ? "9 / 1 / 14 / 2"
+                    : "10 / 2 / 14 / 3";
 
-                  return (
-                    <div
-                      className={`h-[367px] relative flex items-end cursor-pointer`}
-                      key={i}
-                      style={AiCollectionData?.layout ? { gridArea } : {}}
-                      onClick={(e) => {
-                        handleClick(items?.id, e);
-                      }}
-                    >
-                      <img
-                        src={items?.img}
-                        alt=""
-                        className="absolute top-0 w-full h-full rounded-xl object-cover z-10"
-                      />
-                      <div className="flex flex-col z-20 relative w-full blur-bg">
-                        <div className="my-[18px] mx-[24px]">
-                          <div className="flex justify-between items-center mb-2">
-                            <h3>{items?.name}</h3>
-                            <img
-                              src={
-                                storageData?.some(
-                                  (item) => item?.id === items?.id
-                                )
-                                  ? "/HomePage/heart.svg"
-                                  : items?.like
-                              }
-                              alt="Like"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleRemove(items?.id ?? 0);
-                              }}
-                              className="cursor-pointer transition-transform duration-300 hover:scale-125"
-                            />
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <p>Price</p>
-                            <span>{items?.price}</span>
-                          </div>
+                return (
+                  <div
+                    className={`h-[367px] relative flex items-end cursor-pointer`}
+                    key={i}
+                    style={AiCollectionData?.layout ? { gridArea } : {}}
+                    onClick={(e) => {
+                      handleClick(items?.id, e);
+                    }}
+                  >
+                    <img
+                      src={items?.img}
+                      alt=""
+                      className="absolute top-0 w-full h-full rounded-xl object-cover z-10"
+                    />
+                    <div className="flex flex-col z-20 relative w-full blur-bg">
+                      <div className="my-[18px] mx-[24px]">
+                        <div className="flex justify-between items-center mb-2">
+                          <h3>{items?.name}</h3>
+                          <img
+                            src={
+                              storageData?.some(
+                                (item) => item?.id === items?.id
+                              )
+                                ? "/HomePage/heart.svg"
+                                : items?.like
+                            }
+                            alt="Like"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleRemove(items?.id ?? 0);
+                            }}
+                            className="cursor-pointer transition-transform duration-300 hover:scale-125"
+                          />
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <p>Price</p>
+                          <span>{items?.price}</span>
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </>
       )}
     </div>
