@@ -4,9 +4,7 @@ import { AllAiImages } from "../../json";
 
 const Collection = () => {
 
-  const cards = JSON.parse(localStorage.getItem(`likes`) || '[]');
   const data = {
-    cards,
     heading: AllAiImages.heading,
     desc: AllAiImages.desc,
     layout: AllAiImages.layout,
