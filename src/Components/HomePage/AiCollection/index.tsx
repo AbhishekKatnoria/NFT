@@ -89,18 +89,6 @@ const AiCollection = ({ data }: AiCollection) => {
     navigate(`/market-place/item-detail/${itemId}`);
   };
 
-  // // Effect to navigate to collection page after 2 seconds if storageData has items
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    if (location?.pathname === "/" && storageData && storageData.length >= 2) {
-      timeoutId = setTimeout(() => {
-        navigate("/collection");
-      }, 2000);
-    }
-    return () => clearTimeout(timeoutId);
-  }, [storageData, navigate, location]);
-
   return (
     <div
       data-aos="fade-left"
