@@ -45,6 +45,7 @@ const Governance = () => {
                             src={items?.icon}
                             alt="Button icon"
                             className="p-[5px]"
+                            loading="lazy"
                           />
                         </Button>
                       )}

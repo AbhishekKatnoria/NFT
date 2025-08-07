@@ -17,7 +17,7 @@ const StartJourney = () => {
               key={i}
             >
               <div className="inline-block">
-                <img src={item?.img} alt="Cards" />
+                <img src={item?.img} alt="Cards" loading="lazy" />
               </div>
               <h3 className="text-font5xl ">{item?.title}</h3>
               <p>{item?.subTitle}</p>

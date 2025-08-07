@@ -18,6 +18,7 @@
                             key={index}
                             className="py-[15px] px-[14px] bg-white/30 backdrop-blur-[130.47px] rounded-full"
                             alt="icon"
+                            loading="lazy"
                         />
                         ))}
                     </div>

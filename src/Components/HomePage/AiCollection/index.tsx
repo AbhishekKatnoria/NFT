@@ -167,6 +167,7 @@ const AiCollection = ({ data }: AiCollection) => {
                     src={items?.img}
                     alt=""
                     key={i}
+                    loading="lazy"
                     className="absolute top-0  w-full h-full rounded-xl object-cover z-10"
                   />
                   <div className="flex flex-col z-20 relative w-full blur-bg">
@@ -179,6 +180,7 @@ const AiCollection = ({ data }: AiCollection) => {
                               ? "/HomePage/heart.svg"
                               : items?.like
                           }
+                          loading="lazy"
                           alt="Like"
                           onClick={(e) => {
                             handleChange({ items }, e);
@@ -233,6 +235,7 @@ const AiCollection = ({ data }: AiCollection) => {
                     <img
                       src={items?.img}
                       alt=""
+                      loading="lazy"
                       className="absolute top-0 w-full h-full rounded-xl object-cover z-10"
                     />
                     <div className="flex flex-col z-20 relative w-full blur-bg">
@@ -248,6 +251,7 @@ const AiCollection = ({ data }: AiCollection) => {
                                 : items?.like
                             }
                             alt="Like"
+                            loading="lazy"
                             onClick={(e) => {
                               e.stopPropagation();
                               handleRemove(items?.id ?? 0);
