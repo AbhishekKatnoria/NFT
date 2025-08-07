@@ -54,11 +54,21 @@ const Navbar = () => {
       {Nav?.checkout?.img && Nav?.button?.label && (
         <div className="flex gap-3">
           <Button variant="filled" css="rounded-[42px]">
-            <img src={Nav?.button?.img} alt="Checkout" />
+            <img
+              src={Nav?.button?.img}
+              alt="Checkout"
+              loading="lazy"
+              fetchPriority="high"
+            />
             {Nav?.button?.label}
           </Button>
           <div className="p-[9px] gradient-border-varient-sec cursor-pointer overflow-hidden">
-            <img src={Nav?.checkout?.img} alt="Checkout" />
+            <img
+              src={Nav?.checkout?.img}
+              alt="Checkout"
+              loading="lazy"
+              fetchPriority="high"
+            />
           </div>
         </div>
       )}
