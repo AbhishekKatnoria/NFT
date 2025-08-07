@@ -33,12 +33,12 @@ const Banner = ({ data }: Banner) => {
                     settip(true);
                   }}
                 >
-                  <img src={`${item?.img}`} alt="Wallet" />
+                  <img src={`${item?.img}`} alt="Wallet" loading="lazy" />
                   {item?.label}
                 </Button>
               ) : (
                 <Button label={item?.label} css="rounded-[42px]" key={i}>
-                  <img src={`${item?.img}`} alt="Arrow" />
+                  <img src={`${item?.img}`} alt="Arrow" loading="lazy" />
                 </Button>
               )
             )}
@@ -49,7 +49,12 @@ const Banner = ({ data }: Banner) => {
         <div className="flex relative max-w-[411px] w-full blueEffect">
           {BannerData?.images?.map((item, i) => (
             <div className={`bannerImages bannerImages${i + 1}`} key={i}>
-              <img src={item?.img} alt={item?.alt} loading="lazy" />
+              <img
+                src={item?.img}
+                alt={item?.alt}
+                loading="lazy"
+                fetchPriority="high"
+              />
             </div>
           ))}
         </div>
